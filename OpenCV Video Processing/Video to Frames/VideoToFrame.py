@@ -29,7 +29,9 @@ currentFrame = 0
 while(True):
     # Capture frame-by-frame
     ret, frame = cap.read()
-
+    #If frame is none (if video ends) 
+    if frame is None:
+        break
     # Saves image of the current frame in jpg file
     name = './data/frame' + str(currentFrame) + '.jpg'
     print ('Creating...' + name)
@@ -41,6 +43,3 @@ while(True):
 # When everything done, release the capture
 cap.release()
 cv2.destroyAllWindows()
-×
-Drag and Drop
-The image will be downloaded
